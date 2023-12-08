@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier *//* eslint-disable linebreak-style */
 
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('users')
-export class User{
+export class User {
 
     @PrimaryGeneratedColumn()
     id: number;
@@ -18,14 +18,14 @@ export class User{
     email: string;
 
     @Column()
-    company: string;
-
-    @Column('text', { array: true })
-    services: string[];
+    companyName: string;
 
     @Column()
-    budget: string;
+    selectedService: string;
 
     @Column()
-    created_at: Date;
+    projectBudget: string;
+
+    @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+    requested_at: Date;
 } 

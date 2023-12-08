@@ -3,12 +3,12 @@
 
 // import { IsArray, IsEmail, IsNotEmpty, IsNumber } from 'class-validator';
 
-export class CreateUserDto { 
+export class CreateUserDto {
     name: string;
     number: string;
     email: string;
-    company: string;
-    services:string[];
-    budget: string;
-    created_at:Date;
+    companyName: string;
+    selectedService: string;
+    projectBudget: string;
+    requested_at: Date;
 }
