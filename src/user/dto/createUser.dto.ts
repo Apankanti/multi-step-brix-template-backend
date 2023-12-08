@@ -10,4 +10,5 @@ export class CreateUserDto {
     company: string;
     services:string[];
     budget: string;
+    created_at:Date;
 }

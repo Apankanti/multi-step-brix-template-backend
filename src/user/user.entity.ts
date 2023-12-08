@@ -25,4 +25,7 @@ export class User{
 
     @Column()
     budget: string;
+
+    @Column()
+    created_at: Date;
 } 
