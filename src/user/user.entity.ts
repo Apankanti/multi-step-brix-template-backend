@@ -2,7 +2,7 @@
 
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('users')
+@Entity('usersdata')
 export class User {
 
     @PrimaryGeneratedColumn()
