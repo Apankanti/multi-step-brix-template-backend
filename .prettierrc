@@ -1,0 +1,7 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "rules": {
+    "linebreak-style": ["error", "unix"]
+  }
+}
