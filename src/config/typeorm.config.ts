@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier *//* eslint-disable linebreak-style */
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 
-export const typeOrmConfig:TypeOrmModuleOptions={
+export const typeOrmConfig: TypeOrmModuleOptions = {
     type: 'postgres',
     host: 'localhost',
     port: 5432,
@@ -11,5 +11,6 @@ export const typeOrmConfig:TypeOrmModuleOptions={
     entities: [
         __dirname + '/../**/*.entity{.ts,.js}',
     ],
-    synchronize: true,
-}
+    migrations: ["src/migrations/*.ts"],
+    // synchronize: true,
+};
