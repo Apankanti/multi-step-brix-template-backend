@@ -12,6 +12,7 @@ import {
     Param,
     NotFoundException,
     Delete,
+    Get,
 } from '@nestjs/common';
 import { UserService } from '../user.service';
 import { CreateUserDto } from '../dto/createUser.dto';
@@ -32,6 +33,20 @@ export class UserController {
         };
     }
 
+    @Get(":id")
+    async getUserById(@Param("id") id: string){
+        const user = await this.userService.getUserById(id);
+        if (!user) {
+            throw new NotFoundException(`User with ID ${id} not found`);
+        }
+        return user;
+    }
+
+    @Get('/getUsers')
+    async getAllUsers(){
+        const users = await this.userService.getAllUsers();
+        return users;
+    }
     @Put(':id')
     @HttpCode(200)
     async update(
@@ -61,21 +76,3 @@ export class UserController {
     }
 
 }
-
-
-
-// @Delete(':name')
-// async deleteUserByName(@Param('name') name: string): Promise<string> {
-//     try {
-//         await this.userService.removeByName(name);
-//         return `User with name ${name} has been successfully deleted`;
-//     } catch (error) {
-//         if (error instanceof NotFoundException) {
-//             // If the user is not found, return a 404 response
-//             throw error;
-//         } else {
-//             // For other errors, return a generic error message
-//             throw new NotFoundException('Error deleting user');
-//         }
-//     }
-// }

@@ -11,7 +11,8 @@ export const dataSourceOptions : DataSourceOptions={
     entities: [
         __dirname + '/../**/*.entity{.ts,.js}',
     ],
+    // seeds: ['src/seeds/**/*{.ts,.js}'],/
     migrations: ["src/migrations/*.ts"],
-    synchronize: true,
+    synchronize: true,  //Indicates if database schema should be auto created on every application launch. 
 }
 export const dataSource = new DataSource(dataSourceOptions);
