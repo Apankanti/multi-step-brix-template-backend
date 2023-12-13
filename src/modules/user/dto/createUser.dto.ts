@@ -1,8 +1,12 @@
 /* eslint-disable prettier/prettier *//* eslint-disable linebreak-style */
 
 import { IsEmail, IsNotEmpty,IsNumberString } from 'class-validator';
+import { PrimaryGeneratedColumn } from 'typeorm';
 
 export class CreateUserDto {
+  @PrimaryGeneratedColumn()
+  id:number;
+  
   @IsNotEmpty()
   name: string;
 
