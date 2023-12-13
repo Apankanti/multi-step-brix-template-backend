@@ -29,6 +29,6 @@ export class User {
     @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     requested_at: Date;
     
-    @Column()
-    password?:string;
+    // @Column()
+    // password?:string;
 } 

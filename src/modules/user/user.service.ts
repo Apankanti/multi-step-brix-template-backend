@@ -23,7 +23,7 @@ export class UserService {
             throw new NotFoundException(`User with ID ${id} not found`);
         }
 
-        const { name, number, email, companyName, selectedService, projectBudget, password } = updateUserDto;
+        const { name, number, email, companyName, selectedService, projectBudget } = updateUserDto;
 
         // Update user properties
         user.name = name;
@@ -32,7 +32,7 @@ export class UserService {
         user.companyName = companyName;
         user.selectedService = selectedService;
         user.projectBudget = projectBudget;
-        user.password = password;
+        // user.password = password;
 
         // Save changes to the database
         return this.userRepository.save(user);

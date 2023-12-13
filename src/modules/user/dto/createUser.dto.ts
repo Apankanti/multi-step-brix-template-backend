@@ -22,7 +22,7 @@ export class CreateUserDto {
   @IsNotEmpty()
   projectBudget: string;
 
-  password?:string;
-  
+  // password?:string;
+
   requested_at: Date;
 }
