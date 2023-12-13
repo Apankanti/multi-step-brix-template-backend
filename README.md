@@ -100,13 +100,21 @@ Migration is a process of creating and applying changes to the database schema, 
 `
 # Migrations and Seeders
 
-Migrations and seeders can be performed manually or automatically using tools like TypeORM or Sequelize. NestJS provides a built-in module called `TypeOrmModule` that allows you to configure and use TypeORM in your application. TypeORM supports migrations by generating SQL files that contain the commands to create or alter the database schema.
+Migrations and seeders can be performed manually or automatically using tools like TypeORM or Sequelize.
+NestJS provides a built-in module called `TypeOrmModule` that allows you to configure and use TypeORM in your application.
+TypeORM supports migrations by generating SQL files that contain the commands to create or alter the database schema.
 
 ## Sequelize
 
-Sequelize is an ORM library for Node.js that supports various databases such as MySQL, PostgreSQL, SQLite, MongoDB, etc. It enables you to define your data models using plain JavaScript/TypeScript classes and perform CRUD operations on them using promises or async/await syntax. Sequelize also offers features like associations, validations, hooks, transactions, and more. It integrates well with NestJS, providing seamless support for TypeScript and dependency injection.
+Sequelize is an ORM library for Node.js that supports various databases such as MySQL, PostgreSQL, SQLite, MongoDB, etc.
+It enables you to define your data models using plain JavaScript/TypeScript classes and perform CRUD operations on them using promises or async/await syntax.
+Sequelize also offers features like associations, validations, hooks, transactions, and more.
+It integrates well with NestJS, providing seamless support for TypeScript and dependency injection.
 
 ## TypeORM
 
 ```markdown
-TypeORM is an ORM library for Node.js, supporting various databases like MySQL, PostgreSQL, SQLite, MongoDB, etc. It empowers you to define data models using plain JavaScript/TypeScript classes and execute CRUD operations using promises or async/await syntax. TypeORM encompasses features such as relations, validations, hooks, transactions, migrations, etc. It seamlessly integrates with NestJS, delivering a robust combination of TypeScript support and dependency injection.
+TypeORM is an ORM library for Node.js, supporting various databases like MySQL, PostgreSQL, SQLite, MongoDB, etc.
+It empowers you to define data models using plain JavaScript/TypeScript classes and execute CRUD operations using promises or async/await syntax.
+TypeORM encompasses features such as relations, validations, hooks, transactions, migrations, etc.
+It seamlessly integrates with NestJS, delivering a robust combination of TypeScript support and dependency injection.
