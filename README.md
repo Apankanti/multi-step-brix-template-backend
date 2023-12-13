@@ -21,9 +21,9 @@
 </p>
 
 
-# NestJS Project Overview
+# NestJS API Overview
 
-## Introduction
+## DTO
 
 >DTO stands for Data Transfer Object, which is a plain JavaScript/TypeScript class used to define the >data that is sent over the network between the client and server.
 
